@@ -2,8 +2,8 @@ from selenium import webdriver
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 
-class TestLoginPage:
 
+class TestLoginPage:
     URL = "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"
     TITLE = "OrangeHRM"
     USERNAME_LOCATOR = ("xpath", "//input[@name='username']")
@@ -30,7 +30,6 @@ class TestLoginPage:
 
         login_button = self.wait.until(EC.visibility_of_element_located(self.LOGIN_BUTTON_LOCATOR))
         assert login_button.is_enabled(), "Login button isn't enable"
-
 
     def test_login(self):
         username_field = self.wait.until(EC.visibility_of_element_located(self.USERNAME_LOCATOR))
