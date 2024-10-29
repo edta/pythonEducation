@@ -1,4 +1,4 @@
-from base.base_page import BasePage
+from pageObjectLesson1.base.base_page import BasePage
 
 
 class ContactsPage(BasePage):

@@ -1,4 +1,4 @@
-from base.base_test import BaseTest
+from pageObjectLesson1.base.base_test import BaseTest
 
 
 class TestContactsPage(BaseTest):

@@ -1,5 +1,5 @@
-from pages.login_page import LoginPage
-from pages.contacts_page import ContactsPage
+from pageObjectLesson1.pages.login_page import LoginPage
+from pageObjectLesson1.pages.contacts_page import ContactsPage
 
 
 class BaseTest:
