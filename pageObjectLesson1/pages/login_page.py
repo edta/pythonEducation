@@ -3,9 +3,9 @@ from pageObjectLesson1.base.base_page import BasePage
 
 class LoginPage(BasePage):
     _PAGE_URL = "https://release-crm.qa-playground.com/#/login"
-    _USERNAME_FIELD = ("xpath", "//input[@id='username']")
-    _PASSWORD_FIELD = ("xpath", "//input[@id='password']")
-    _SIGN_IN_BUTTON = ('xpath', "//button[@type='submit']")
+    _USERNAME_FIELD = "//input[@id='username']"
+    _PASSWORD_FIELD = "//input[@id='password']"
+    _SIGN_IN_BUTTON = "//button[@type='submit']"
 
     def login(self, username, login):
         username_field = self.driver.find_element(*self._USERNAME_FIELD)

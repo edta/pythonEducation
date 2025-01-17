@@ -1,10 +1,11 @@
 from selenium.webdriver.chrome.webdriver import WebDriver
+from pageObjectLesson1.metaclasses.meta_locator import MetaLocator
 
 
-class BasePage:
-    _DASHBOARD_TAB = ('xpath', "//a[text()='Dashboard']")
-    _PROFILE_BUTTON = ('xpath', "//button[@aria-label='Profile']")
-    _LOGOUT_BUTTON = ('xpath', "//ul[@role='menu']//li//div")
+class BasePage(metaclass=MetaLocator):
+    _DASHBOARD_TAB = "//a[text()='Dashboard']"
+    _PROFILE_BUTTON = "//button[@aria-label='Profile']"
+    _LOGOUT_BUTTON = "//ul[@role='menu']//li//div"
 
     def __init__(self, driver):
         self.driver: WebDriver = driver
